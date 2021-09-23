@@ -27,6 +27,8 @@ body {
   min-height: 100vh;
   height: 100%;
   font-family: $base-font;
-  background-color: $light-gray;
   position: relative;
+
+  background: url(assets/images/bg-pattern-desktop.svg);
+  background-size: rem(1070);
 }

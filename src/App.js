@@ -1,13 +1,12 @@
 
-import './App.css';
-import Input from './Input';
-import FormHook from './Input/ReactHook';
+import Home from 'pages/Home';
+import './assets/css/style.css';
+
 
 function App() {
   return (
     <div className="App">
-      <Input />
-      <FormHook />
+      <Home />
     </div>
   );
 }

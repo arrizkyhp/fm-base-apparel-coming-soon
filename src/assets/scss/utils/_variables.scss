@@ -3,32 +3,28 @@
 // Colors
 // Primary
 
-$red: hsl(0, 78%, 62%);
-$cyan: hsl(180, 62%, 55%);
-$orange: hsl(34, 97%, 64%);
-$blue: hsl(212, 86%, 64%);
+$desaturated-red: hsl(0, 36%, 70%);
+$soft-red: hsl(0, 93%, 68%);
 
 // Neutral
-$dark-blue: hsl(234, 12%, 34%);
-$gray-blue: hsl(229, 6%, 66%);
-$light-gray: hsl(0, 0%, 98%);
+$dark-grayish-red: hsl(0, 6%, 24%);
+
+// Gradient
+$red-gradient: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+$light-gradient: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 
 // Colors Pallete
 $colors: (
-  "red": $red,
-  "cyan": $cyan,
-  "orange": $orange,
-  "blue": $blue,
-  "dark-blue": $dark-blue,
-  "gray-blue": $gray-blue,
-  "light-gray": $light-gray,
+  "desaturated-red": $desaturated-red,
+  "soft-red": $soft-red,
+  "dark-red": $dark-grayish-red,
 );
 
 // Font size
-$base-font-size: rem(15) !default;
+$base-font-size: rem(16) !default;
 
 // Border Radius
 $base-border-radius: rem(8) !default;
 
 // Box-Shadow
-$base-box-shadow: 0px 10px 25px rgba($blue, 0.1), 0px 10px 25px rgba($blue, 0.1);
+// $base-box-shadow: 0px 10px 25px rgba($blue, 0.1), 0px 10px 25px rgba($blue, 0.1);

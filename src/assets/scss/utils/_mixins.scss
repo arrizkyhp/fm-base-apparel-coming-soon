@@ -1,5 +1,6 @@
 @use "functions" as *;
 @use "variables" as *;
+@use "font" as *;
 
 @mixin flex-centering() {
   display: flex;
@@ -12,4 +13,10 @@
   display: grid;
   justify-content: center;
   align-items: center;
+}
+
+@mixin input-text() {
+  color: $desaturated-red;
+  font-family: $base-font;
+  font-size: $base-font-size;
 }

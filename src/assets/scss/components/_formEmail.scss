@@ -1,0 +1,22 @@
+@use "../utils" as *;
+
+form {
+  display: flex;
+
+  .form-group {
+    position: relative;
+    input {
+      width: rem(443);
+      height: rem(61);
+      border-radius: rem(50);
+      padding-left: rem(30);
+      border: rem(1) solid $desaturated-red;
+      outline: none;
+      @include input-text();
+
+      &::placeholder {
+        @include input-text();
+      }
+    }
+  }
+}

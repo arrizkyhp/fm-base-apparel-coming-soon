@@ -1,5 +1,26 @@
 @use "../utils" as *;
 
 main {
-  @include flex-centering();
+  display: grid;
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-columns: 2fr auto;
+  grid-template-areas:
+    "logo hero"
+    "content hero"
+    "content hero";
+  margin-left: rem(160);
+  height: 100vh;
+
+  .logo {
+    grid-area: logo;
+  }
+
+  .content {
+    grid-area: content;
+  }
+
+  .hero {
+    grid-area: hero;
+    height: 100%;
+  }
 }
