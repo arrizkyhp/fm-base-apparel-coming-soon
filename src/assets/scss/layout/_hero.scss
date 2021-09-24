@@ -1,0 +1,15 @@
+@use "../utils" as *;
+
+.hero {
+  height: 100%;
+  width: 100%;
+
+  @include breakpoint-max(xl) {
+    width: auto;
+  }
+}
+
+.hero-mobile {
+  // height: 100%;
+  width: 100%;
+}

@@ -21,4 +21,8 @@
     background: linear-gradient(89.91deg, #ffffff -58.93%, #f8bfbf 99.91%);
     box-shadow: -1px 19px 18px rgba(208, 140, 140, 0.28), 0px 5.17412px 6.5894px rgba(238, 139, 139, 0.161263);
   }
+
+  @include breakpoint-max(sm) {
+    width: rem(90);
+  }
 }

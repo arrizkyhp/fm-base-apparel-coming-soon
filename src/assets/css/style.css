@@ -112,16 +112,32 @@ form .form-group .form-control::placeholder {
 form .form-group .form-control.error-message {
   border: 3px solid #f96262;
 }
+@media (max-width: 480px) {
+  form .form-group .form-control {
+    width: 21.25rem;
+    padding-right: 8.75rem;
+  }
+}
 form .form-group .error-icon::after {
   content: url(assets/images/icon-error.svg);
   position: absolute;
   top: 1.25rem;
   right: 8.125rem;
 }
+@media (max-width: 480px) {
+  form .form-group .error-icon::after {
+    right: 6.5625rem;
+  }
+}
 form p {
   margin-top: 0.625rem;
   margin-left: 1.875rem;
   color: #f96262;
+}
+@media (max-width: 480px) {
+  form p {
+    text-align: left;
+  }
 }
 
 .btn {
@@ -147,13 +163,39 @@ form p {
   -webkit-box-shadow: -1px 19px 18px rgba(208, 140, 140, 0.28), 0px 5.17412px 6.5894px rgba(238, 139, 139, 0.161263);
           box-shadow: -1px 19px 18px rgba(208, 140, 140, 0.28), 0px 5.17412px 6.5894px rgba(238, 139, 139, 0.161263);
 }
+@media (max-width: 480px) {
+  .btn {
+    width: 5.625rem;
+  }
+}
 
 .logo {
   margin-top: 4.375rem;
 }
+@media (max-width: 480px) {
+  .logo {
+    margin: 1.875rem 0 2.625rem 2.5rem;
+    max-width: 7.4375rem;
+  }
+}
+
+.hero {
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 1200px) {
+  .hero {
+    width: auto;
+  }
+}
+
+.hero-mobile {
+  width: 100%;
+}
 
 .content {
   padding-top: 8.125rem;
+  margin-right: 1.875rem;
 }
 .content__hero-text {
   font-size: 4rem;
@@ -166,17 +208,39 @@ form p {
 .content__hero-text span {
   font-weight: 300;
 }
+@media (max-width: 480px) {
+  .content__hero-text {
+    font-size: 3rem;
+    line-height: 3.125rem;
+  }
+}
 .content__hero-description {
   font-size: 1rem;
   max-width: 26.6875rem;
   line-height: 1.59375rem;
   margin-bottom: 2.5rem;
 }
+@media (max-width: 480px) {
+  .content__hero-description {
+    max-width: 21.625rem;
+  }
+}
+@media (max-width: 960px) {
+  .content {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 480px) {
+  .content {
+    text-align: center;
+    padding-top: 4.375rem;
+  }
+}
 
 main {
   display: grid;
   grid-template-rows: auto 1fr 1fr;
-  grid-template-columns: 2fr auto;
+  grid-template-columns: 1fr auto;
   grid-template-areas: "logo hero" "content hero" "content hero";
   margin-left: 10rem;
   height: 100vh;
@@ -189,6 +253,21 @@ main .content {
 }
 main .hero {
   grid-area: hero;
-  height: 100%;
+}
+@media (max-width: 1200px) {
+  main {
+    margin-left: 3.125rem;
+  }
+}
+@media (max-width: 480px) {
+  main {
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 2fr;
+    grid-template-areas: "logo " "hero" "content";
+  }
 }
 /*# sourceMappingURL=style.css.map */

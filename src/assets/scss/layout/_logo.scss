@@ -2,4 +2,9 @@
 
 .logo {
   margin-top: rem(70);
+
+  @include breakpoint-max(sm) {
+    margin: rem(30) 0 rem(42) rem(40);
+    max-width: rem(119);
+  }
 }

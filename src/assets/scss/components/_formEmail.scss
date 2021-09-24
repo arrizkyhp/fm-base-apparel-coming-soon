@@ -25,6 +25,11 @@ form {
       &.error-message {
         border: 3px solid $soft-red;
       }
+
+      @include breakpoint-max(sm) {
+        width: rem(340);
+        padding-right: rem(140);
+      }
     }
 
     .error-icon {
@@ -33,6 +38,10 @@ form {
         position: absolute;
         top: rem(20);
         right: rem(130);
+
+        @include breakpoint-max(sm) {
+          right: rem(105);
+        }
       }
     }
   }
@@ -40,5 +49,9 @@ form {
     margin-top: rem(10);
     margin-left: rem(30);
     color: $soft-red;
+
+    @include breakpoint-max(sm) {
+      text-align: left;
+    }
   }
 }
