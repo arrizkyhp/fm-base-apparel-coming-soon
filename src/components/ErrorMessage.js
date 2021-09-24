@@ -1,6 +1,6 @@
 const ErrorMessage = (props) => {
     return (
-        <p>{props.message}</p>
+        <p className="error">{props.message}</p>
       );
 }
 

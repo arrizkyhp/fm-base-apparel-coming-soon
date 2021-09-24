@@ -2,21 +2,43 @@
 
 form {
   display: flex;
+  flex-direction: column;
 
   .form-group {
     position: relative;
-    input {
+    width: fit-content;
+
+    .form-control {
       width: rem(443);
       height: rem(61);
       border-radius: rem(50);
       padding-left: rem(30);
       border: rem(1) solid $desaturated-red;
       outline: none;
+      padding-right: rem(170);
       @include input-text();
 
       &::placeholder {
         @include input-text();
       }
+
+      &.error-message {
+        border: 3px solid $soft-red;
+      }
     }
+
+    .error-icon {
+      &::after {
+        content: url(assets/images/icon-error.svg);
+        position: absolute;
+        top: rem(20);
+        right: rem(130);
+      }
+    }
+  }
+  p {
+    margin-top: rem(10);
+    margin-left: rem(30);
+    color: $soft-red;
   }
 }

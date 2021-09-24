@@ -1,13 +1,19 @@
 import React from 'react'
 
-import arrowIcon from 'assets/images/icon-arrow.svg'
+import propTypes from 'prop-types'
 
-export default function Button() {
+
+export default function Button(props) {
+
     return (
         <button
-            className="btn"
+            className={props.className}
             type="submit"
         >
         </button>
     )
+}
+
+Button.propTypes = {
+    className: propTypes.string
 }
