@@ -5,6 +5,7 @@ import Content from 'layout/Content'
 import logoApparel from 'assets/images/logo.svg';
 import heroDesktop from 'assets/images/hero-desktop.jpg';
 import heroMobile from 'assets/images/hero-mobile.jpg';
+import Footer from 'layout/Footer';
 
 const Home = () => {
 
@@ -17,6 +18,7 @@ const Home = () => {
         <Content />
         {isTablet && <img src={heroDesktop} alt="" className="hero" />}
         {isMobile && <img src={heroMobile} alt="" className="hero-mobile" />}
+        <Footer />
       </main>
     );
 }
