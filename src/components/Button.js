@@ -9,6 +9,7 @@ export default function Button(props) {
         <button
             className={props.className}
             type="submit"
+            aria-label="Submit"
         >
         </button>
     )
