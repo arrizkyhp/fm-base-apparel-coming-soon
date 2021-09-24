@@ -28,7 +28,7 @@ main {
   }
 
   @include breakpoint-max(sm) {
-    margin: 0 auto;
+    margin: 0 auto rem(114) auto;
     justify-content: center;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 2fr;

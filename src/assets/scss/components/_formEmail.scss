@@ -52,6 +52,11 @@ form {
 
     @include breakpoint-max(sm) {
       text-align: left;
+      align-self: flex-start;
     }
+  }
+
+  @include breakpoint-max(sm) {
+    align-items: center;
   }
 }
