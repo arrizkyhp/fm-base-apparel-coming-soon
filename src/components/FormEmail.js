@@ -4,7 +4,14 @@ import { useForm } from "react-hook-form";
 import ErrorMessage from './ErrorMessage';
 
 export default function FormEmail() {
-    const [submitted, isSubmitted] = useState(false);
+    const [submitted, setSubmitted,] = useState(false);
+    const [values, setValues] = useState({
+        email: ""
+    })
+    const [valueEmail, setValueEmail] = useState({
+        email: ""
+    })
+
 
       const {
         handleSubmit,
@@ -13,11 +20,17 @@ export default function FormEmail() {
       } = useForm();
 
       const onSubmit = (data) => {
-          isSubmitted(true);
-          console.log(data);
-      };
+          setSubmitted(true);
+           setValueEmail({ email: data.email });
+        };
 
-      console.log(submitted)
+
+        const handleEmailInputChange = (event) => {
+            setValues({ ...values, email: event.target.value });
+            if(values !== valueEmail) setSubmitted(false)
+        };
+
+
     return (
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">
@@ -33,12 +46,14 @@ export default function FormEmail() {
                 message: "Please enter a valid email.",
               },
             })}
+            value={values.email}
+            onChange={handleEmailInputChange}
           />
           {errors?.email && <span className="error-icon"></span>}
           <Button className={"btn"} />
         </div>
         {submitted && <p className="success text-dark-red">Thanks for joining us!</p>}
-          {errors?.email && <ErrorMessage message={errors.email.message}/>}
+        {errors?.email && <ErrorMessage message={errors.email.message} />}
       </form>
     );
 }
